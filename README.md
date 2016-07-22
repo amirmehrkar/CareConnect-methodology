@@ -1,7 +1,7 @@
 # CareConnect-methodology
 
 ## Goal
-To adapt the HL7 FHIR standard and create a libray of profiles (resources and interaction patterns) that implementors can adopt to simplify integration and interoperability within UK Health and Social Care.
+To adapt the HL7 FHIR standard and create a library of profiles (resources and interaction patterns) that implementors can adopt to simplify integration and interoperability within UK Health and Social Care.
 
 ## Methodology
 Profiling creates FHIR resources including: StructureDefinitions (profiles AND data dictionary items), ValueSets (standard lists), Conformance statements (client-server interaction patterns). Profiling also creates documentation (e.g. patterns of use) Assets are held by the HL7-UK organisation on github [https://github.com/HL7-UK]. Assets are licensed under Apache 2 license [http://www.apache.org/licenses/LICENSE-2.0]. Assets are managed by an editorial team representing stakeholders.
@@ -23,27 +23,35 @@ Editors review pull requests for consistency prior to merging into develop.Perio
 ## Editorial policy
 Profiles should follow the HL7 FHIR standard so that standard tooling can be used.
 
-Principle 1 - Share freely
+### Editorial principles
+These principles broadly adopt the established Code4Health interoperability community design principles [https://code4health.org/communities/interoperability/groups/design]
+
+#### Share freely
 When sharing resources, enable information repositories to share freely i.e. provide flexibility to include whatever information that they are willing and able to share.
 
 This means that:
+
 1. common profiles should rarely (if ever?) constrain out properties in the core profiles. As part of this, we need to carefully consider modifierExtension as this places constraints on the information consumers.
 2. common profiles should set minimum constraints necessary for interoperability within England (? UK), especially where we have an agreed national standard. For example, Patient.identifier should include an NHS Number, a CodeableConcept should include a SNOMED code etc.
 3. Where common elements can be identified, provide guidance on how to share them in a consistent way. For example, it's far more important to profile Address to provide a common definition than to require use of Address within every Patient resource (initially emphasise the data dictionary rather than the data model?).
 
-Principle 2 - Accept grudgingly
+#### Accept grudgingly
 When accepting resources, enable information repositories to constrain freely i.e. they must have flexibility to constrain the information they accept to reflect internal constraints and policies.
 
 This means that:
+
 1. common profiles should set only the minimum constraints necessary for interoperability within the UK.
 2. information repositories are responsible for publishing profiles describing the resources they accept. These profiles extend the common profiles and constrain out data items that can't be accepted. I would expect these profiles to be aggressive in how they constrain! There is nothing to preclude a special interest group defining a common profile that they use by mutual agreement.
 
-Principle 3 - naming
-Names are important and hard. The scheme for profile naming is:
+#### Naming
+Names will be informative to implementors and consistent across the profiles.
 
-CareConnect-{{resource}}-{{major}}
+The scheme for profile naming is:
 
-Principle 4 - versioning
-Resource versioning follows Semantic Versioning [http://semver.org/]. Resources carry major version in name (e.g. CareConnect-Foo-2) and major/minor version within StructureDefinition/Conformance. Major versions will be maintained in parallel for a period of time before deprecation (period to be confirmed, but anticipated to be at least 12 months).
+    CareConnect-{{profile.name}}-{{major}}
 
-These principles broadly adopt the established Code4Health interoperability community design principles [https://code4health.org/communities/interoperability/groups/design]
+#### Versioning
+Resource versioning follows Semantic Versioning [http://semver.org/]. Resources carry major version in name (e.g. CareConnect-Foo-2) and major/minor version within StructureDefinition/Conformance. 
+
+Major versions will be maintained in parallel for a period of time before deprecation (period to be confirmed, but anticipated to be at least 12 months).
+
