@@ -1,7 +1,7 @@
 # CareConnect-methodology
 
 ## Goal
-To adapt the HL7 FHIR standard and create a library of profiles (resources and interaction patterns) that implementers can adopt to simplify integration and interoperability within UK Health and Social Care.
+To adapt the HL7® FHIR® standard and create a library of profiles (resources and interaction patterns) that implementers can adopt to simplify integration and interoperability within UK Health and Social Care.
 
 ## Methodology
 Profiling creates FHIR resources including: 
@@ -67,7 +67,7 @@ Contributions to this repository are encouraged.
 Please submit your contributions as pull requests to the develop branch. It will be appreciated if the pull request description includes the rationale for the change!
 
 ## License
-Copyright 2016 HL7 UK
+Copyright © 2016 HL7 UK
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -80,3 +80,13 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+HL7® FHIR® standard Copyright © 2011+ HL7
+
+The HL7® FHIR® standard is used under the FHIR license. You may obtain 
+a copy of the FHIR license at
+
+    https://www.hl7.org/fhir/license.html
+    
+## Trademarks
+HL7 and FHIR are registered trademarks of Health Level Seven International
