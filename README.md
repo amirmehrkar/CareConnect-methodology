@@ -1,14 +1,20 @@
 # CareConnect-methodology
 
 ## Goal
-To adapt the HL7 FHIR standard and create a library of profiles (resources and interaction patterns) that implementors can adopt to simplify integration and interoperability within UK Health and Social Care.
+To adapt the HL7® FHIR® standard and create a library of profiles (resources and interaction patterns) that implementers can adopt to simplify integration and interoperability within UK Health and Social Care.
 
 ## Methodology
-Profiling creates FHIR resources including: StructureDefinitions (profiles AND data dictionary items), ValueSets (standard lists), Conformance statements (client-server interaction patterns). Profiling also creates documentation (e.g. patterns of use) Assets are held by the HL7-UK organisation on github [https://github.com/HL7-UK]. Assets are licensed under Apache 2 license [http://www.apache.org/licenses/LICENSE-2.0]. Assets are managed by an editorial team representing stakeholders.
+Profiling creates FHIR resources including: 
+
+- StructureDefinitions (profiles AND data dictionary items)
+- ValueSets (standard lists)
+- Conformance statements (client-server interaction patterns)
+
+Profiling also creates documentation (e.g. patterns of use). Assets are held by the HL7-UK organisation on GitHub [https://github.com/HL7-UK]. Assets are licensed under Apache 2 license [http://www.apache.org/licenses/LICENSE-2.0]. Assets are managed by an editorial team representing stakeholders.
 
 Each domain of interest has an individual public repository, to allow different domains to proceed at their own rate. It is anticipated that an additional data dictionary repository will hold shared/common resources. Where resources exist in a number of domains, editors will seek to harmonise across domains and bring into data dictionary.
 
-Each repository uses the gitflow pattern [http://nvie.com/posts/a-successful-git-branching-model/]. Latest versions of assets are available on develop branch. Latest version of documentation is published as github pages.
+Each repository uses the gitflow pattern [http://nvie.com/posts/a-successful-git-branching-model/]. Latest versions of assets are available on develop branch. Latest version of documentation is published as GitHub pages.
 
 ## Contributors
 Contributors are responsible for the customisation of resources to suit the requirements of the domain.
@@ -18,7 +24,7 @@ Contributors create a GitHub account and fork the develop branch of the reposito
 ## Editors
 Editors are responsible for coordinating the publishing of resources created by the community of contributors.
 
-Editors review pull requests for consistency prior to merging into develop.Periodically, editors create a release candidate. Where appropriate, editors seek wider review of assets within release candidate including clinical review, connectathon testing. Following successful review, assets are marked as active and published to master branch. Github webhooks are configured to automatically publish master branch from github to Furore's simplifier registry [https://www.simplifier.net/] to share  assets until such time as a UK-specific registry is available.
+Editors review pull requests for consistency prior to merging into develop.Periodically, editors create a release candidate. Where appropriate, editors seek wider review of assets within release candidate including clinical review, connectathon testing. Following successful review, assets are marked as active and published to master branch. GitHub webhooks are configured to automatically publish master branch from GitHub to Furore's simplifier registry [https://www.simplifier.net/] to share  assets until such time as a UK-specific registry is available.
 
 ## Editorial policy
 Profiles should follow the HL7 FHIR standard so that standard tooling can be used.
@@ -32,7 +38,7 @@ When sharing resources, enable information repositories to share freely i.e. pro
 This means that:
 
 1. common profiles should rarely (if ever?) constrain out properties in the core profiles. As part of this, we need to carefully consider modifierExtension as this places constraints on the information consumers.
-2. common profiles should set minimum constraints necessary for interoperability within England (? UK), especially where we have an agreed national standard. For example, Patient.identifier should include an NHS Number, a CodeableConcept should include a SNOMED code etc.
+2. common profiles should set minimum constraints necessary for interoperability within England (? UK), especially where we have an agreed national standard. For example, Patient.identifier should include an NHS Number, a CodeableConcept should include a SNOMED  CT code etc.
 3. Where common elements can be identified, provide guidance on how to share them in a consistent way. For example, it's far more important to profile Address to provide a common definition than to require use of Address within every Patient resource (initially emphasise the data dictionary rather than the data model?).
 
 #### Accept grudgingly
@@ -44,7 +50,7 @@ This means that:
 2. information repositories are responsible for publishing profiles describing the resources they accept. These profiles extend the common profiles and constrain out data items that can't be accepted. I would expect these profiles to be aggressive in how they constrain! There is nothing to preclude a special interest group defining a common profile that they use by mutual agreement.
 
 #### Naming
-Names will be informative to implementors and consistent across the profiles.
+Names will be informative to implementers and consistent across the profiles.
 
 The scheme for profile naming is:
 
@@ -61,7 +67,7 @@ Contributions to this repository are encouraged.
 Please submit your contributions as pull requests to the develop branch. It will be appreciated if the pull request description includes the rationale for the change!
 
 ## License
-Copyright 2016 HL7 UK
+Copyright © 2016 HL7 UK
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -74,3 +80,13 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+HL7® FHIR® standard Copyright © 2011+ HL7
+
+The HL7® FHIR® standard is used under the FHIR license. You may obtain 
+a copy of the FHIR license at
+
+    https://www.hl7.org/fhir/license.html
+    
+## Trademarks
+HL7 and FHIR are registered trademarks of Health Level Seven International
