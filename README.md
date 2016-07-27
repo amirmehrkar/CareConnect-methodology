@@ -56,6 +56,14 @@ The scheme for profile naming is:
 
     CareConnect-{{profile.name}}-{{major}}
 
+The scheme for file naming is:
+
+    CareConnect-{{profile.name}}-{{major}}.{{resourceType in lowercase}}.xml
+    
+The scheme for urls is:
+
+    http://hl7.org.uk/CareConnect-{{profile.name}}-{{major}}.{{resourceType in lowercase}}.xml
+
 #### Versioning
 Resource versioning follows Semantic Versioning [http://semver.org/]. Resources carry major version in name (e.g. CareConnect-Foo-2) and major/minor version within StructureDefinition/Conformance. 
 
